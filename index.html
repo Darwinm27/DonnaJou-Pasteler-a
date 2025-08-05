@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donna Jou Pastelería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Segoe+UI&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rosado-claro: #ffd6e8;
+      --rosado: #f8bfcf;
+      --rosado-fuerte: #e895a3;
+      --marron: #432818;
+      --dorado: #c45500;
+      --blanco: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--rosado-claro);
+      color: var(--marron);
+      background-image: radial-gradient(circle at 20% 20%, #ffe3ed, transparent 70%),
+                        radial-gradient(circle at 80% 80%, #ffd1e2, transparent 70%);
+      background-attachment: fixed;
+    }
+
+    header {
+      background: var(--rosado);
+      padding: 50px 20px 30px;
+      text-align: center;
+      border-bottom: 5px dotted var(--rosado-fuerte);
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5rem;
+      margin: 0;
+      color: var(--marron);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      color: #5a3827;
+    }
+
+    nav {
+      background: var(--rosado-fuerte);
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 25px;
+      background-color: #d97888;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: var(--marron);
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 60px 25px;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      width: 90px;
+      height: 5px;
+      background: var(--rosado-fuerte);
+      display: block;
+      margin: 15px auto 0;
+      border-radius: 5px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 35px;
+    }
+
+    .product {
+      background: var(--blanco);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product::before {
+      content: "🍪";
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      font-size: 1.5rem;
+    }
+
+    .product img {
+      border-radius: 15px;
+      max-width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .product h3 {
+      font-size: 1.4rem;
+      margin: 15px 0 10px;
+    }
+
+    .product p {
+      font-size: 1rem;
+      color: #5a3827;
+    }
+
+    .product strong {
+      color: var(--dorado);
+      font-size: 1.2rem;
+      display: block;
+      margin-top: 12px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    footer {
+      background: var(--rosado);
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+      border-top: 4px dotted var(--rosado-fuerte);
+    }
+
+    ol {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1rem;
+    }
+
+    a {
+      color: #e78f8f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Donna Jou Pastelería 🍪</h1>
+    <p>Galletas artesanales estilo New York</p>
+  </header>
+
+  <nav>
+    <a href="#galletas">Galletas</a>
+    <a href="#comprar">¿Cómo comprar?</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="galletas">
+    <h2>Nuestras Galletas</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="imagenes/BISCODD_u_CHOCO.jpg" alt="Biscoff y Choco Blanco">
+        <h3>Biscoff y Choco Blanco</h3>
+        <p>Con relleno cremoso de Biscoff, galleta Lotus y chips de chocolate blanco.</p>
+        <strong>€4,50 EUR</strong>
+      </div>
+      <div class="product">
+        <img src="imagenes/chesscake.jpg" alt="Cheesecake">
+        <h3>Cheesecake</h3>
+        <p>Rellena de crema de cheesecake y mermelada de fresas. Suave y cremosa.</p>
+        <strong>€4,50 EUR</strong>
+      </div>
+      <div class="product">
+        <img src="imagenes/choconuez.jpg" alt="ChocoNuez">
+        <h3>ChocoNuez</h3>
+        <p>Chocolate, nueces y corazón de Nutella. Crujiente y fundente.</p>
+        <strong>€4,50 EUR</strong>
+      </div>
+      <div class="product">
+        <img src="imagenes/churro.jpg" alt="Churro">
+        <h3>Churro</h3>
+        <p>Con azúcar, canela y centro cremoso de dulce de leche.</p>
+        <strong>€4,50 EUR</strong>
+      </div>
+      <div class="product">
+        <img src="imagenes/cookiescream.jpg" alt="Cookies & Cream">
+        <h3>Cookies & Cream</h3>
+        <p>Relleno de crema artesanal y galleta entera en el centro.</p>
+        <strong>€4,50 EUR</strong>
+      </div>
+      <div class="product">
+        <img src="imagenes/ferrero.jpg" alt="Ferrero">
+        <h3>Ferrero</h3>
+        <p>Inspirada en el bombón: con Nutella y avellanas. Textura perfecta.</p>
+        <strong>€4,50 EUR</strong>
+      </div>
+      <div class="product">
+        <img src="imagenes/pistacho.jpg" alt="Pistacho">
+        <h3>Pistacho</h3>
+        <p>Galleta gruesa con relleno cremoso de pistacho y choco blanco.</p>
+        <strong>€5,50 EUR</strong>
+      </div>
+      <div class="product">
+        <img src="imagenes/READ_VELVET.jpg" alt="Red Velvet">
+        <h3>Red Velvet Nutella</h3>
+        <p>Con corazón de Nutella. Crujiente y suave a la vez.</p>
+        <strong>€4,50 EUR</strong>
+      </div>
+      <div class="product">
+        <img src="imagenes/lemon.jpg" alt="Lemon Pie">
+        <h3>Lemon Pie Gourmet</h3>
+        <p>Con relleno de crema de limón. Ideal para amantes de lo cítrico.</p>
+        <strong>€5,00 EUR</strong>
+      </div>
+      <div class="product">
+        <img src="imagenes/recetarios.jpg" alt="Recetario">
+        <h3>Recetario NY Cookies</h3>
+        <p>5 recetas exclusivas para hornear tus propias galletas.</p>
+        <strong>€20,00 EUR</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="comprar">
+    <h2>¿Cómo comprar?</h2>
+    <div style="background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.6;">
+      <p style="font-size: 1.3rem; font-weight: bold; margin-bottom: 20px;">¡Hacer tu pedido es muy fácil! 💖</p>
+      <ol style="text-align: left; padding-left: 1.2em;">
+        <li>🍪 Elige tus cookies favoritas de nuestro catálogo.</li>
+        <li>📱 Te contactamos por WhatsApp para confirmar tu orden.</li>
+      </ol>
+      <p style="margin-top: 20px; font-weight: bold;">¡Así de simple, rápido y delicioso! 😋</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div style="background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); max-width: 800px; margin: 0 auto; text-align: center; font-size: 1rem; line-height: 1.8;">
+      <p>📍 <strong>Ubicación:</strong> Barcelona | Sabadell</p>
+      <p>📞 <strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/message/F55TGSFSUEONP1?autoload=1&app_absent=0" target="_blank">+34 611 85 06 70</a></p>
+      <p>📸 <strong>Instagram:</strong> <a href="https://instagram.com/donnajoupasteleria" target="_blank">@donnajoupasteleria</a></p>
+      <p style="margin-top: 20px; font-weight: bold;">¡Estamos aquí para ayudarte con tu pedido! 💬</p>
+    </div>
+  </section>
+
+  <a class="whatsapp" href="https://api.whatsapp.com/message/F55TGSFSUEONP1?autoload=1&app_absent=0" target="_blank">
+    📲 Pedir por WhatsApp
+  </a>
+</body>
+
+<footer>
+  <p>&copy; 2025 Donna Jou Pastelería. Hecho con ❤️ Barcelona | Sabadell</p>
+</footer>
+</html>
